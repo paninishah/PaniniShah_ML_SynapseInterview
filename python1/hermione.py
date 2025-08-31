@@ -17,6 +17,7 @@ for i, rune in enumerate(runes):
         my_runes.get('S', 0)>= 1):
         print(f"formed at step {i+1}")
         formed_flag = True
+        break
 
 if formed_flag == False:
     print (-1)
