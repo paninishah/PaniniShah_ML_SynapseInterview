@@ -18,4 +18,8 @@ k = int(input("enter a number: "))
 pok_names = list(Pokedex.keys())
 
 for j in combinations (pok_names, k):
-    print(j)
+    team_types = set()
+    for i in j:
+        pok_types = Pokedex[i]
+        team_types.update(pok_types)
+    print(f"Team: {j}, Types: {team_types}, Count: {len(team_types)}")
