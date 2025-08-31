@@ -30,4 +30,13 @@ for j in combinations (pok_names, k):
         best_team = j
         max_types = len(team_types)
 
-print(f"Best Team: {best_team}, with {max_types} team types")
+print(f"Maximum types found: {max_types}")
+print("Best teams: ")
+
+for j in combinations (pok_names, k):
+    team_types = set()
+    for i in j:
+        pok_types = Pokedex[i]
+        team_types.update(pok_types)
+    if len(team_types) == max_types:
+        print(f"Team: {j}, Types: {team_types}")
